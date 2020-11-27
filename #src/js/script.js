@@ -7,7 +7,7 @@ const pages = document.querySelectorAll('.pagination__button');
 burger.addEventListener('click', function () {
   burger.classList.toggle('active');
   menu.classList.toggle('active');
-  // этот класс мы вводим чтобы нельзя было скролить контент при открытом меню
+  // We add this class to make it non-scrollable when the menu is open
   body.classList.toggle('lock');
 });
 
