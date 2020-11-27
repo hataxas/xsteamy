@@ -99,6 +99,7 @@ h6 {
 
 body {
   font-size: 10px;
+  background-color: #17071d;
 }
 
 .wrapper {
@@ -324,9 +325,9 @@ body {
 
 .pagination__button.selected {
   border: 0.1rem solid #f0f0f0;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .pagination__link {
