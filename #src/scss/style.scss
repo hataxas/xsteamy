@@ -129,7 +129,6 @@ body {
     "videos"
     "pagination";
   padding: 0;
-  row-gap: 2rem;
   font-family: $poppins;
 }
 
@@ -171,6 +170,7 @@ body {
   }
 }
 .all-videos {
+  margin: 2rem 0 0 0;
   grid-area: videos;
   display: flex;
   flex-wrap: wrap;

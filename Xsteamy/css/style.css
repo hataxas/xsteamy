@@ -215,7 +215,6 @@ body {
       grid-template: minmax(3rem, auto) 1fr minmax(3rem, auto)/1fr;
       grid-template-areas: "search" "videos" "pagination";
   padding: 0;
-  row-gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -269,8 +268,9 @@ body {
 }
 
 .all-videos {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
+  margin: 2rem 0 0 0;
   grid-area: videos;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,7 +309,7 @@ body {
 }
 
 .pagination {
-  -ms-grid-row: 5;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: pagination;
   margin: auto;
