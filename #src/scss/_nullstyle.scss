@@ -45,6 +45,7 @@ input,
 button,
 textarea {
   font-family: inherit;
+  -webkit-appearance: none;
 }
 
 input::-ms-clear {
