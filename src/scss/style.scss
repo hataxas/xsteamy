@@ -70,7 +70,7 @@ body {
     left: 0;
     font-size: 1.5rem;
     line-height: 3.5rem;
-    padding: 0 0.5rem;
+    padding: 0;
   }
   &__item {
     padding: 0.1rem 0;
@@ -344,7 +344,7 @@ body {
       background-color: $medium;
       /* при помощи z-index делаем так чтобы меню было скрыто под подложкой */
       z-index: 1;
-      padding: 7rem 1rem 2rem 1rem;
+      padding: 7rem 0rem 2rem 0rem;
       transition: all 0.3s ease 0s;
     }
 
