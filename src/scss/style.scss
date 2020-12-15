@@ -157,12 +157,11 @@ body {
 
   &__button {
     grid-area: button;
-    background-color: $white;
     width: 3rem;
     height: 3rem;
     z-index: 50;
-    background-color: $medium;
-    border: 0.1rem solid $white;
+    background-color: $light;
+    //border: 0.1rem solid $white;
   }
   &__icon {
     display: block;
@@ -215,9 +214,12 @@ body {
     cursor: pointer;
   }
   &__button.selected {
-    border-bottom: 0.2rem solid $pink;
+    //border-bottom: 0.2rem solid $pink;
     background-color: $light;
     transition: all 0.3s ease 0s;
+  }
+  &__button.selected &__link {
+    color: $pink;
   }
   &__link {
     font-family: $poppins;
