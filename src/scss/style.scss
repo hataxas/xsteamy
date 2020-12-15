@@ -26,9 +26,10 @@ $dark: #17071d;
 $light: hsl(284, 45%, 18%);
 $pink: #e83e8c;
 
-$h1-font-size: 2rem;
-$h3-font-size: 1.5rem;
+$h1-font-size: 2.8rem;
+$h3-font-size: 2rem;
 
+html,
 body {
   font-size: 10px;
   background-color: $dark;
@@ -40,7 +41,7 @@ body {
 .container {
   overflow: hidden;
   display: grid;
-  grid-template-columns: 18rem 1fr;
+  grid-template-columns: 25rem 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "side content";
 }
@@ -53,7 +54,7 @@ body {
   }
 
   &__logo {
-    padding: 1.5rem 1rem 0 1rem;
+    padding: 2rem 1.5rem 0 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -65,20 +66,20 @@ body {
 
   &__items {
     position: fixed;
-    width: 18rem;
-    top: 5rem;
+    width: 25rem;
+    top: 8rem;
     left: 0;
-    font-size: 1.5rem;
-    line-height: 3.5rem;
+    font-size: 1.8rem;
+    line-height: 5rem;
     padding: 0;
   }
   &__item {
-    padding: 0.1rem 0;
+    padding: 0.2rem 0;
     border-left: 0.3rem solid $medium;
   }
   &__item.selected {
     background-color: $light;
-    border-left: 0.3rem solid $pink;
+    border-left: 0.4rem solid $pink;
     transition: all 0.5s ease 0s;
   }
   &__item.selected .feather {
@@ -87,13 +88,13 @@ body {
   }
   &__link {
     color: $white;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     position: relative;
   }
 
   .sidebar__text {
     position: absolute;
-    left: 4rem;
+    left: 5.5rem;
     font-family: $poppins;
     font-weight: 600;
   }
@@ -101,7 +102,7 @@ body {
     color: $white;
     position: absolute;
     top: 5%;
-    left: 1rem;
+    left: 1.5rem;
   }
 }
 
@@ -125,22 +126,22 @@ body {
 .content {
   grid-area: content;
   display: grid;
-  grid-template: minmax(3rem, auto) 1fr minmax(3rem, auto) / 1fr;
+  grid-template: minmax(4rem, auto) 1fr minmax(4rem, auto) / 1fr;
   grid-template-areas:
     "search"
     "videos"
     "pagination";
-  padding: 0;
+  padding: 0 0.5rem;
   font-family: $poppins;
 }
 
 .search {
   grid-area: search;
   position: fixed;
-  left: 18rem;
+  left: 25rem;
   right: 0rem;
   display: grid;
-  grid-template: minmax(3rem, auto) / 1fr 3rem;
+  grid-template: minmax(4rem, auto) / 1fr 4rem;
   grid-template-areas: "input button";
   padding: 1rem;
   background-color: $dark;
@@ -148,8 +149,8 @@ body {
 
   &__input {
     grid-area: input;
-    height: 3rem;
-    font-size: 1.5rem;
+    height: 4rem;
+    font-size: 2rem;
     background-color: $white;
     z-index: 50;
     padding: 0 0.5rem;
@@ -157,17 +158,23 @@ body {
 
   &__button {
     grid-area: button;
-    width: 3rem;
-    height: 3rem;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
     z-index: 50;
     background-color: $light;
     //border: 0.1rem solid $white;
   }
   &__icon {
     display: block;
+    position: absolute;
+    top: -0.3rem;
+    left: 0.3rem;
+    height: 4rem;
+    width: 4rem;
     transform: rotate(45deg);
     color: $white;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 .all-videos {
@@ -178,7 +185,7 @@ body {
   justify-content: space-between;
 
   &__item {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
   }
 
   &__item img {
@@ -187,8 +194,9 @@ body {
 
   &__item-description {
     color: $white;
-    font-size: 1.2rem;
-    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    padding: 1rem 0 1.5rem;
   }
 }
 .large-2 {
@@ -204,12 +212,12 @@ body {
 .pagination {
   grid-area: pagination;
   margin: auto;
-  padding: 1rem 0 3rem;
+  padding: 1.5rem 0 4rem;
 
   &__button {
-    width: 3rem;
-    height: 3rem;
-    margin: 0 0.3rem;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: 0 0.5rem;
     background-color: $medium;
     cursor: pointer;
   }
@@ -224,7 +232,7 @@ body {
   &__link {
     font-family: $poppins;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $white;
   }
 }
@@ -239,7 +247,7 @@ body {
   }
 
   .pagination {
-    margin: -1rem auto 1rem;
+    margin: 0.5rem auto 1.5rem;
     padding: 1rem 0;
     &__button.hiding {
       display: none;
@@ -270,7 +278,7 @@ body {
       /* показываем контентную часть шапки (сейчас она скрыта под подложкой) временно для наглядности */
       display: flex;
       justify-content: space-between;
-      height: 3rem;
+      height: 4rem;
       align-items: center;
     }
 
@@ -283,8 +291,8 @@ body {
     &__burger {
       display: block;
       position: relative;
-      width: 2.5rem;
-      height: 2rem;
+      width: 2.4rem;
+      height: 1.4rem;
       z-index: 3;
       cursor: pointer;
     }
@@ -294,8 +302,8 @@ body {
       background-color: $white;
       position: absolute;
       width: 100%;
-      height: 0.3rem;
-      border-radius: 0.2rem;
+      height: 0.2rem;
+      //border-radius: 0.2rem;
       left: 0;
       transition: all 0.3s ease 0s;
     }
@@ -309,23 +317,23 @@ body {
       background-color: $white;
       position: absolute;
       width: 100%;
-      height: 0.3rem;
+      height: 0.2rem;
       left: 0rem;
-      top: 0.85rem;
-      border-radius: 0.2rem;
+      top: 0.6rem;
+      //border-radius: 0.2rem;
       transition: all 0.3s ease 0s;
     }
     /* делаем из бургера крестик */
     &__burger.active::before {
       transform: rotate(45deg);
-      top: 0.85rem;
+      top: 0.6rem;
     }
     &__burger.active::after {
       transform: rotate(-45deg);
-      bottom: 0.85rem;
+      bottom: 0.6rem;
     }
     &__burger.active span {
-      transform: scale(0);
+      display: none;
     }
 
     &__link {
@@ -344,13 +352,13 @@ body {
       background-color: $medium;
       /* при помощи z-index делаем так чтобы меню было скрыто под подложкой */
       z-index: 1;
-      padding: 7rem 0rem 2rem 0rem;
+      padding: 10rem 0rem 2rem 0rem;
       transition: all 0.3s ease 0s;
     }
 
     &__item {
       position: relative;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
     &__items.active {
       top: 0;
@@ -380,7 +388,7 @@ body {
     overflow: hidden;
   }
   .content {
-    padding: 3.5rem 0 0 0;
+    padding: 5rem 0 0 0;
     display: block;
   }
 
@@ -390,21 +398,21 @@ body {
     padding: 0.5rem 0.5rem;
     position: fixed;
     width: 100%;
-    top: 3rem;
+    top: 4rem;
     left: 0;
     z-index: 50;
     margin: 0;
 
     &__input {
       width: 100%;
-      height: 2rem;
-      font-size: 1.5rem;
+      height: 3rem;
+      font-size: 2rem;
       z-index: 3;
     }
 
     &__button {
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
       z-index: 3;
       position: relative;
     }
@@ -412,10 +420,10 @@ body {
       display: block;
       transform: rotate(45deg);
       color: $white;
-      font-size: 1.5rem;
+      font-size: 3rem;
       position: absolute;
-      left: 25%;
-      top: -15%;
+      left: -0.2rem;
+      top: -0.8rem;
     }
   }
   /* создаем подложку для поиска */
@@ -432,7 +440,7 @@ body {
   .all-videos {
     display: block;
     width: 100%;
-    margin: 2.5rem 0 0 0;
+    margin: 3rem 0 0 0;
     text-align: center;
     &__item {
       width: 100%;
@@ -465,11 +473,11 @@ body {
 //! max-width 510px
 @media (max-width: 510px) {
   .pagination {
-    padding: 0.3rem 0;
+    padding: 0.4rem 0;
     &__button {
-      width: 2.4rem;
-      height: 2.4rem;
-      margin: 0 0.2rem;
+      width: 3.3rem;
+      height: 3.3rem;
+      margin: 0 0.3rem;
     }
     &__button.hiding-s {
       display: none;
@@ -483,7 +491,7 @@ body {
     font-family: $montserrat;
     color: $white;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
 
     &__x {
@@ -499,11 +507,11 @@ body {
     }
   }
   .pagination {
-    padding: 0.3rem 0;
+    padding: 0.4rem 0;
     &__button {
-      width: 2rem;
-      height: 2rem;
-      margin: 0 0.2rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      margin: 0 0.3rem;
     }
     &__button.selected {
       border: 0.02rem solid $white;
