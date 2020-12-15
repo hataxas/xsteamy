@@ -21,8 +21,10 @@ $montserrat: "Montserrat", sans-serif;
 //! Colors
 $green: #1db327;
 $white: #f0f0f0;
-$light: #281230;
+$medium: #281230;
 $dark: #17071d;
+$light: hsl(284, 45%, 18%);
+$pink: #e83e8c;
 
 $h1-font-size: 2rem;
 $h3-font-size: 1.5rem;
@@ -44,7 +46,7 @@ body {
 }
 .sidebar {
   grid-area: side;
-  background-color: $light;
+  background-color: $medium;
   font-family: $poppins;
 
   &__body {
@@ -72,15 +74,15 @@ body {
   }
   &__item {
     padding: 0.1rem 0;
-    border-left: 0.3rem solid $light;
+    border-left: 0.3rem solid $medium;
   }
   &__item.selected {
-    background-color: $dark;
-    border-left: 0.3rem solid #e83e8c;
+    background-color: $light;
+    border-left: 0.3rem solid $pink;
     transition: all 0.5s ease 0s;
   }
   &__item.selected .feather {
-    color: #e83e8c;
+    color: $pink;
     transition: all 0.3s ease 0s;
   }
   &__link {
@@ -159,7 +161,7 @@ body {
     width: 3rem;
     height: 3rem;
     z-index: 50;
-    background-color: $light;
+    background-color: $medium;
     border: 0.1rem solid $white;
   }
   &__icon {
@@ -209,11 +211,12 @@ body {
     width: 3rem;
     height: 3rem;
     margin: 0 0.3rem;
-    background-color: $light;
+    background-color: $medium;
     cursor: pointer;
   }
   &__button.selected {
-    border: 0.1rem solid $white;
+    border-bottom: 0.2rem solid $pink;
+    background-color: $light;
     transition: all 0.3s ease 0s;
   }
   &__link {
@@ -252,7 +255,7 @@ body {
   }
 
   .sidebar {
-    background-color: $light;
+    background-color: $medium;
     padding: 0 1rem;
     position: fixed;
     width: 100%;
@@ -336,7 +339,7 @@ body {
       height: 100%;
       /* для того чтобы если наше меню не влезает в размеры экрана можно было скролить его*/
       overflow: auto;
-      background-color: $light;
+      background-color: $medium;
       /* при помощи z-index делаем так чтобы меню было скрыто под подложкой */
       z-index: 1;
       padding: 7rem 1rem 2rem 1rem;
@@ -367,7 +370,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $light;
+    background-color: $medium;
     z-index: 2;
   }
   body.lock {
