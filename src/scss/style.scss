@@ -82,27 +82,24 @@ body {
     border-left: 0.4rem solid $pink;
     transition: all 0.5s ease 0s;
   }
-  &__item.selected .feather {
+  &__item.selected i.fas.fa-home::before,
+  &__item.selected i.fas.fa-film::before,
+  &__item.selected i.far.fa-folder-open::before,
+  &__item.selected i.far.fa-file::before {
     color: $pink;
     transition: all 0.3s ease 0s;
   }
   &__link {
     color: $white;
-    padding: 0 1.5rem;
-    position: relative;
+    padding: 0 1.7rem;
   }
 
   .sidebar__text {
-    position: absolute;
-    left: 5.5rem;
+    //position: absolute;
+    //left: 5.5rem;
     font-family: $poppins;
     font-weight: 600;
-  }
-  .feather {
-    color: $white;
-    position: absolute;
-    top: 5%;
-    left: 1.5rem;
+    padding: 0 0 0 1.5rem;
   }
 }
 
@@ -329,10 +326,6 @@ body {
     &__burger.active span {
       display: none;
     }
-
-    &__link {
-      color: $white;
-    }
     /* убираем пункты меню */
     &__items {
       position: fixed;
@@ -346,23 +339,12 @@ body {
       background-color: $medium;
       /* при помощи z-index делаем так чтобы меню было скрыто под подложкой */
       z-index: 1;
-      padding: 10rem 0rem 2rem 0rem;
+      padding: 11rem 0rem 0rem 0rem;
       transition: all 0.3s ease 0s;
-    }
-
-    &__item {
-      position: relative;
-      padding: 0 1.5rem;
     }
     &__items.active {
       top: 0;
       transition: all 0.3s ease 0s;
-    }
-    .feather {
-      color: $white;
-      position: absolute;
-      top: 5%;
-      left: 0rem;
     }
   }
 
