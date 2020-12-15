@@ -253,7 +253,7 @@ body {
     display: block;
     max-width: 767px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .sidebar {
@@ -387,7 +387,7 @@ body {
   //! Search
   .search {
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     position: fixed;
     width: 100%;
     top: 3rem;
